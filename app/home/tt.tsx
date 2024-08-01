@@ -17,6 +17,10 @@ function HomePage() {
     <>
       <div className="min-h-screen bg-gradient-to-b from-purple-200 to-cyan-100 flex items-center justify-center p-4">
         <div className="absolute inset-0 bg-gradient-radial from-red-300 to-green opacity-70 rounded-full blur-2xl"></div>
+        <div
+          className="absolute inset-0 z-20 pointer-events-none"
+          style={{ backgroundImage: "url('/noise.jpg')", opacity: 0.07 }}
+        ></div>
         <div className="relative z-10 grid grid-cols-3 gap-6 w-full max-w-7xl">
           {/* Rider Section */}
           <div className="bg-white bg-opacity-40 backdrop-blur-md p-6 rounded-xl shadow-lg border border-gray-200">
