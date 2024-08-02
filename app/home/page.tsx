@@ -1,4 +1,5 @@
 import React from "react";
+import CurLocation from "./curlocation";
 
 function HomePage() {
   const dummyRiders = [
@@ -27,12 +28,8 @@ function HomePage() {
             <h2 className="text-xl font-bold mb-4">Rider</h2>
             <div className="mb-4">
               <label className="block mb-2 font-semibold">
-                Current Location:
+                Current Location: <CurLocation />
               </label>
-              <input
-                type="text"
-                className="w-full p-2 rounded bg-white bg-opacity-50 border border-gray-300"
-              />
             </div>
             <div className="mb-4">
               <label className="block mb-2 font-semibold">
@@ -57,11 +54,8 @@ function HomePage() {
             <div className="mb-4">
               <label className="block mb-2 font-semibold">
                 Current Location:
+                <CurLocation />
               </label>
-              <input
-                type="text"
-                className="w-full p-2 rounded bg-white bg-opacity-50 border border-gray-300"
-              />
             </div>
             <div className="mb-4">
               <label className="block mb-2 font-semibold">
@@ -105,11 +99,8 @@ function HomePage() {
             <div className="mb-4">
               <label className="block mb-2 font-semibold">
                 Current Location:
+                <CurLocation />
               </label>
-              <input
-                type="text"
-                className="w-full p-2 rounded bg-white bg-opacity-50 border border-gray-300"
-              />
             </div>
             <div className="mb-4">
               <label className="block mb-2 font-semibold">Nearby Riders:</label>
