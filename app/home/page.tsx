@@ -1,5 +1,6 @@
 import React from "react";
 import CurLocation from "./curlocation";
+import ConnectionPage from "../websocket/WebSocketClient";
 
 function HomePage() {
   const dummyRiders = [
@@ -31,6 +32,7 @@ function HomePage() {
                 Current Location: <CurLocation />
               </label>
             </div>
+            <ConnectionPage />
             <div className="mb-4">
               <label className="block mb-2 font-semibold">
                 Destination Location:

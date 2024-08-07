@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
+import WebSocketClient from "../websocket/WebSocketClient";
 
 interface GeolocationPosition {
   coords: {
@@ -34,6 +35,15 @@ const handleUpdate = async (loc: String) => {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
     console.log("Updated LOC to API!!!!!!!!!");
+
+    const _data = {
+      _id: "ride_1d4bbfb9",
+      rider_id: "r_2c3d1855",
+      driver_id: "d_ba489fe8",
+      timestamp: 1,
+      loc: loc,
+      status: "draft",
+    };
   } catch (error) {
     console.error("Error:", error);
   }
@@ -47,16 +57,16 @@ function CurLocation() {
     const success = (pos: GeolocationPosition) => {
       setCounter(counter + 1);
       setPosition(pos);
-      handleUpdate(
-        String(pos.coords.latitude) + "," + String(pos.coords.longitude)
-      );
-      console.log(
-        "Updated this many time:",
-        counter,
-        pos.coords.latitude,
-        pos.coords.longitude,
-        pos.timestamp
-      );
+      // handleUpdate(
+      //   String(pos.coords.latitude) + "," + String(pos.coords.longitude)
+      // );
+      // console.log(
+      //   "Updated this many time:",
+      //   counter,
+      //   pos.coords.latitude,
+      //   pos.coords.longitude,
+      //   pos.timestamp
+      // );
     };
 
     const error = (err: GeolocationError) => {
